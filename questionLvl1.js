@@ -1,10 +1,10 @@
 export const questionsLvl1 = [
     {
         "id": 1,
-        "BonneReponse": "Ça sert à améliorer la position d'un site web sur les pages de résultats des moteurs de recherche",
+        "BonneReponse": "A améliorer la position d'un site web sur les moteurs de recherche",
         "Categories": "SEO, c'est quoi ?",
         "Difficulte": "Facile",
-        "MauvaiseReponses": ["A rien", "Ca sert à améliorer la qualité d'un site web sur les pages de résultats des moteurs de recherches"],
+        "MauvaiseReponses": ["A rien", "A améliorer la qualité d'un site web sur les moteurs de recherches","Toujours à rien"],
         "Question": "A quoi sert le SEO ? ",
     },
     {
@@ -12,7 +12,7 @@ export const questionsLvl1 = [
         "BonneReponse": "2-3 mots-clés",
         "Categories": "Les mots-clés",
         "Difficulte": "Facile",
-        "MauvaiseReponses": ["5-6 mots-clés","10-12 mots-clés"],
+        "MauvaiseReponses": ["5-6 mots-clés","10-12 mots-clés","Aucun mot-clés"],
         "Question": "De combien de mots-clés est composé un nom de domaine ?",
     },
     {
@@ -20,7 +20,7 @@ export const questionsLvl1 = [
         "BonneReponse": "Modifier la balise \"Robots\" de la page",
         "Categories": "Les outils",
         "Difficulte": "Difficile",
-        "MauvaiseReponses": ["Bloquer la page","Archiver la page"],
+        "MauvaiseReponses": ["Bloquer la page","Archiver la page","Supprimer la page"],
         "Question": "Je souhaite bloquer l'indexation d'une page par Google, que dois-je faire?",
     },
     {
@@ -36,15 +36,15 @@ export const questionsLvl1 = [
         "BonneReponse": "La balise Meta Title",
         "Categories": "Les balises",
         "Difficulte": "Difficile",
-        "MauvaiseReponses": ["La balise Meta Description","La balise meta keywords"],
+        "MauvaiseReponses": ["La balise Meta Description","La balise Meta Keywords","La balise Image"],
         "Question": "Dans la page de résultats Google, à quelle balise correspond la ligne principale en bleu ?",
     },
     {
         "id": 9,
-        "BonneReponse": "Pour un lien cliquable ",
+        "BonneReponse": "Pour un lien cliquable",
         "Categories": "Architecture du site",
         "Difficulte": "Facile",
-        "MauvaiseReponses": ["Pour les titres d'oeuvre","Pour faire jolie"],
+        "MauvaiseReponses": ["Pour les titres d'oeuvre","Pour faire jolie","Pourquoi pas ?"],
         "Question": "Dans quel cas doit-on souligner un texte ?",
     },
     {
@@ -76,7 +76,7 @@ export const questionsLvl1 = [
         "BonneReponse": "Une annonce Google Ads",
         "Categories": "Les outils",
         "Difficulte": "Facile",
-        "MauvaiseReponses": ["Une annonce Google trends", "Une annonce Google Analystics"],
+        "MauvaiseReponses": ["Une annonce Google trends", "Une annonce Google Analystics","Une annonce LeBoncoin"],
         "Question": "Qu'est-ce qu'un lien sponsorisé ?",
     }
 ]

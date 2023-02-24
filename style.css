@@ -68,6 +68,7 @@ body {
 }
 
 .case {
+    
     width: 800px;
     height: 600px;
     border-radius: 3rem;
@@ -79,11 +80,29 @@ body {
     transform: scale(0.2);
 }
 
+.arrowCross {
+    clip-path: polygon(75% 10%, 100% 50%, 75% 90%, 60% 90%, 30% 100%, 0 90%, 14% 50%, 0 10%);
+}
+
+.arrowRight {
+    clip-path: polygon(75% 10%, 100% 50%, 75% 90%, 0 90%, 25% 50%, 0 10%);
+}
+
+.arrowDown {
+
+}
+
+.arrowUp {
+
+}
+
 .flip {
     cursor: pointer;
     transform: rotateX(180deg) ;
     z-index: 3;
 }
+
+
 
 .front, .back {
     width: 100%;
@@ -97,9 +116,10 @@ body {
     backface-visibility: hidden;
 }
 
+
 .back {
     transform: rotateX(180deg);
-    
+    font-size: 2rem;
 }
 
 .hidden {
@@ -156,7 +176,7 @@ body {
     border-radius: 2rem;
     width: 300px;
     height: 200px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .pion {
@@ -280,6 +300,9 @@ h1 {
 
 .perdu {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .startLogo {

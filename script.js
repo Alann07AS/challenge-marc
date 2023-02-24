@@ -1,4 +1,7 @@
 import {questionsLvl1} from "./questionLvl1.js"
+import {SoundBank} from "./audio.js"
+
+SoundBank.bonnereponse.volume = 0.5;
 
 let activeCaseId = 0;
 
@@ -25,6 +28,7 @@ const modalDifficulty = document.getElementById("myModalDifficulty");
 const esayBtn = document.getElementById("easyBtn");
 const hardBtn = document.getElementById("hardBtn");
 const startButton = document.querySelector('#start-game');
+const restartButton = document.querySelector('#restart-game')
 const startPage = document.getElementById("startPage");
 
 let easy = true;
@@ -33,6 +37,7 @@ function initLvl1() {
     for (let i = 0 ; i < 21 ; i++) {
         let question = questionsLvl1.find(x => x.id === i)
         const c = document.createElement("div");
+        c.classList.add("arrow")
         const front = document.createElement("div")
         front.classList.add("front")
         const back = document.createElement("div")
@@ -131,6 +136,7 @@ function movePion(){
     progressTruLvl1();
     activeCase = document.getElementById(activeCaseId.toString());
     addPion(activeCase,pion);
+    SoundBank.pion.play();
     setTimeout(() => {
         removePion(activeCase,pion)
         triggerQuestion(activeCase); 
@@ -167,23 +173,24 @@ function mainGame(){
 }
 
 function triggerQuestion(activeCase){
+   SoundBank.carte.play();
    activeCase.classList.add("flip")
+   activeCase.classList.remove("arrow")
    let front = activeCase.getElementsByClassName("front")[0]
    front.innerHTML = ""
 }
 
 function endOfLvl1(bool) {
     if (bool){
+        
         niveau1.style.display = "none";
         lifeDiv.style.display = "none";
-        console.log("Fin Du game WIN");
         redirectToCertificatePage();
     } else {
-        perduDiv.style.display = "block";
+        perduDiv.style.display = "flex";
         lifeDiv.style.display = "none";
         niveau1.style.display = "none";
         backgroundFade.style.display = "none";
-        console.log("Fin Du game LOSE");
     }
 }
 
@@ -241,15 +248,18 @@ function selectAnswer(e) {
     const correct = selectedButton.dataset.correct
     let activeCase = document.getElementById(activeCaseId.toString());
     if (correct) {
+        SoundBank.bonnereponse.play();
         activeCase.classList.add("right");
 
     } else {
+        SoundBank.mauvaisereponse.play();
         activeCase.classList.add("wrong");
         lifeCount --;
         updateLife();
         
         if (lifeCount <= 0){
             endOfLvl1(false);
+            return;
         }
     }
     askDifficulty()
@@ -258,6 +268,10 @@ function selectAnswer(e) {
 
 function redirectToCertificatePage() {
     window.location.href = "certificate.html";
+}
+
+function redirectToStart() {
+    window.location.href = "index.html";
 }
 
 startButton.addEventListener('click', function(event) {
@@ -271,6 +285,12 @@ startButton.addEventListener('click', function(event) {
     updateLife();
     mainGame();
 });
+
+restartButton.addEventListener('click', function(event) {
+    redirectToStart();
+})
+
+
 
 
 

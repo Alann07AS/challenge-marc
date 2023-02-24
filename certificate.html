@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CERTIFICAT_SEO</title>
     <script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script defer src="certificate.js"></script>
+    <script defer src="certificate.js" type="module"></script>
 </head>
 <body>
     <div id="certificateprocesse">
         <div id="cert">
-            <img src="./certificate.jpg" alt="certificat Trivial Seo">
+            <img class="certif" src="./certificate.jpg" alt="certificat Trivial Seo">
             <input type="text" id="name" placeholder="Entrer votre nom" autocomplete="off" autofocus>
         </div>
-        <button type="submit" id="summit">Get Certifiate <img src="./certlogo.png" alt="" ></button>
+        <button id="summit">Get Certifiate <img class="certlogo" src="./certlogo.png" alt="" ></button>
         <div id="back"></div>
         <style>
 
@@ -32,9 +32,14 @@
                 top: 0;
                 z-index: -1;
             }
-            /* img {
+            .certif {
                 height: 88vh;
-            } */
+            }
+
+            .certlogo {
+                height: 50px;
+            }
+
             #certificateprocesse {
                 display: flex;
                 flex-direction: column;
@@ -42,6 +47,7 @@
             }
             #cert {
                 position: relative;
+                
             }
             #name {
                 height: auto;

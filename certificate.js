@@ -1,5 +1,9 @@
+import {SoundBank} from "./audio.js"
+
 const inputButton = document.getElementById("summit")
+console.log(inputButton);
 const fListener = ()=>{
+    console.log("COUCOY");
     const cert = document.getElementById("cert");
     const name = document.getElementById("name");
     const p = document.createElement("p");
@@ -31,5 +35,6 @@ const downloadLink = document.createElement('a');
 
       // Supprimer le lien de téléchargement de la page
     document.body.removeChild(downloadLink);
-    location.reload();  
+    window.location.href = "index.html";  
 });}
+SoundBank.applaudissement.play();
