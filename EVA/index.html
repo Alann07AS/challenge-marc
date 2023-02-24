@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js" type="module"></script>
+    <title>Board Game</title>
+</head>
+<body>
+    <div id="backgroundFade" class="backgroundFade"></div>
+    <div class="startPage" id="startPage">
+        <img class="startLogo" src="trivial.png" alt="le logo du jeu">
+        <a href="#" id="start-game">
+            <img class="startButton " src="2.png" alt="le bouton start">
+        </a>
+    </div>
+    
+    <div class="lifes" id="lifes"></div>
+    <div class="niveau1" id="niveau1">
+        <img class="deco" id="deco1" src="10.png" alt="deco">
+        <img class="deco" id="deco2" src="11.png" alt="deco">
+        <img class="deco" id="deco3" src="12.png" alt="deco">
+        <img class="deco" id="deco4" src="13.png" alt="deco">
+        <img class="deco" id="facile" src="facile.png" alt="deco">
+        <img class="deco" id="difficile" src="difficile.png" alt="deco">
+    </div>
+
+    <div id="myModalDifficulty" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>Choose your difficulty</p>
+          <button id="easyBtn">Facile</button>
+          <button id="hardBtn">Difficile</button>
+        </div>
+    </div>
+    <div class="perdu" id="perdu">
+        <img class="loseScreen" src="perdu.png" alt="l ecran de perte du jeu">
+    </div>
+
+
+</body>
+</html>

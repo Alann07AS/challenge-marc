@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERTIFICAT_SEO</title>
+    <script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script defer src="certificate.js"></script>
+</head>
+<body>
+    <div id="certificateprocesse">
+        <div id="cert">
+            <img src="./certificate.jpg" alt="certificat Trivial Seo">
+            <input type="text" id="name" placeholder="Entrer votre nom" autocomplete="off" autofocus>
+        </div>
+        <button type="submit" id="summit">Get Certifiate <img src="./certlogo.png" alt="" ></button>
+        <div id="back"></div>
+        <style>
+
+            @font-face {
+                font-family: signature;
+                src: url("./Thesignature.ttf"), serif;
+            }
+
+            #back {
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.438);
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            /* img {
+                height: 88vh;
+            } */
+            #certificateprocesse {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #cert {
+                position: relative;
+            }
+            #name {
+                height: auto;
+                font-family: "signature";
+                font-size: 86px;
+                color: #cbb274;
+                position: absolute;
+                left: 50%;
+                top: 55%;
+                transform: translate(-50%,-50%);
+                width: 30%;
+                text-align: center;
+                background: none;
+                border: none;
+            }
+            #name:focus {
+                outline: none;
+            }
+            #summit {
+                display: flex;
+                align-items: center;
+                font-size: larger;
+            }
+        </style>
+    </div>
+</body>
+</html>
